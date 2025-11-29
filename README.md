@@ -61,23 +61,19 @@ Project ini menggunakan **OpenWeather API** (Current Weather & 5-Day Forecast).
 
 ---
 
-| 🔍 **Search + Auto-Complete** | ⭐ **Favorite Cities + System Log** |
-|-------------------------------|-------------------------------------|
-| ![Search Feature](assets/screenshots/search-autocomplete.png) | ![Favorites + Log](assets/screenshots/favorite-systemlog.png) |
+🔍 **Search + Auto-Complete + Favorite Cities + System Log**
+<img width="1916" height="964" alt="3" src="https://github.com/user-attachments/assets/3bfb16f2-ae2f-48ae-a5f8-60a15b101779" />
 
 ---
 
-| 🧮 **Toggle Celsius / Fahrenheit** | 🗓️ **5-Day Forecast** |
-|-------------------------------------|-------------------------|
-| ![Toggle](assets/screenshots/toggle-cf.png) | ![Forecast](assets/screenshots/forecast.png) |
+🧮 **Toggle Celsius / Fahrenheit + Refresh Button + Auto Update **
+<img width="345" height="126" alt="image" src="https://github.com/user-attachments/assets/6d283af2-9b79-4d41-826d-a9edc4f84879" />
 
 ---
 
-| 🔄 **Refresh Button + Auto Update** | 📍 **Example City: Bandung** |
-|-------------------------------------|------------------------------|
-| ![Refresh](assets/screenshots/refresh.png) | ![Bandung](assets/screenshots/bandung.png) |
-
+📍 **Example City: Bandung  dan 5-Day Forecast** 
+<img width="1919" height="1028" alt="4" src="https://github.com/user-attachments/assets/ea1a3a18-3b29-4565-8686-1e0028ff6254" />
 
 ---
 
-
+_Tri Septiani (2315061036)_
