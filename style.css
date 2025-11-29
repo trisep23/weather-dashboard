@@ -1,0 +1,71 @@
+body {
+  background: url("assets/bg-day.jpg") no-repeat center center fixed;
+  background-size: cover;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(199, 223, 255, 0.55);
+  backdrop-filter: blur(8px);
+  z-index: -1;
+}
+
+html.dark body {
+  background: url("assets/bg-night.jpg") no-repeat center center fixed;
+  background-size: cover;
+}
+
+html.dark body::before {
+  background: rgba(5, 16, 40, 0.7);
+  backdrop-filter: blur(10px);
+}
+
+* {
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease,
+    backdrop-filter 0.3s ease;
+}
+
+.spinner {
+  border-radius: 999px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: rgba(255, 255, 255, 0.5);
+  border-top-color: #38bdf8;
+  width: 16px;
+  height: 16px;
+  animation: spin 0.7s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.status-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 999px;
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.7);
+}
+
+#logList::-webkit-scrollbar { width: 6px; }
+#logList::-webkit-scrollbar-thumb {
+  background-color: rgba(148, 163, 184, 0.8);
+  border-radius: 999px;
+}
+
+.weather-icon-lg {
+  width: 72px;
+  height: 72px;
+  image-rendering: -webkit-optimize-contrast;
+}
+
+.forecast-card {
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 14px 30px rgba(15, 23, 42, 0.12);
+}

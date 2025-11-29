@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <title>Weather Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="min-h-screen text-slate-800 dark:text-slate-100">
+  <nav
+    class="backdrop-blur-xl bg-white/70 dark:bg-slate-900/70 shadow border-b border-white/40 dark:border-slate-800">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between gap-4">
+      <div>
+        <h1 class="text-2xl font-bold tracking-tight">Weather Dashboard</h1>
+      </div>
+      <div class="flex items-center gap-3">
+        <button id="themeToggle"
+          class="relative w-14 h-8 rounded-full bg-sky-100 dark:bg-slate-700 flex items-center justify-between px-2 shadow-inner border border-white/50 dark:border-slate-600">
+          <span id="themeBall"
+            class="absolute left-1 top-1 w-6 h-6 rounded-full bg-white shadow transition-transform duration-200"></span>
+          <span class="relative z-10 flex-1 flex items-center justify-start">
+            <svg class="w-4 h-4 text-amber-400" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M12 4.75a.75.75 0 0 1 .75-.75h.5a.75.75 0 0 1 .75.75V6a.75.75 0 0 1-.75.75h-.5A.75.75 0 0 1 12 6V4.75Zm0 13.25a.75.75 0 0 1 .75-.75h.5a.75.75 0 0 1 .75.75V20a.75.75 0 0 1-.75.75h-.5A.75.75 0 0 1 12 20v-2Zm7.25-6.25a.75.75 0 0 1 .75-.75h2a.75.75 0 0 1 0 1.5h-2a.75.75 0 0 1-.75-.75ZM2 11.75a.75.75 0 0 1 .75-.75H4.5a.75.75 0 0 1 0 1.5H2.75A.75.75 0 0 1 2 11.75Zm14.72-6.03a.75.75 0 0 1 1.06 0l.35.35a.75.75 0 0 1 0 1.06l-1.06 1.06a.75.75 0 0 1-1.06-1.06l1.06-1.06Zm-9.9 9.9a.75.75 0 0 1 1.06 0l1.06 1.06a.75.75 0 1 1-1.06 1.06L6.82 16.68a.75.75 0 0 1 0-1.06Zm9.9 1.06 1.06 1.06a.75.75 0 0 1-1.06 1.06l-1.06-1.06a.75.75 0 1 1 1.06-1.06Zm-9.9-9.9 1.06 1.06A.75.75 0 0 1 6.82 8.8L5.76 7.74A.75.75 0 0 1 6.82 6.68Zm4.18 2.07a3.75 3.75 0 1 1 0 7.5 3.75 3.75 0 0 1 0-7.5Z" />
+            </svg>
+          </span>
+          <span class="relative z-10 flex-1 flex items-center justify-end">
+            <svg class="w-4 h-4 text-slate-500 dark:text-sky-200" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M21 12.79A9 9 0 0 1 11.21 3 7 7 0 1 0 21 12.79Z" />
+            </svg>
+          </span>
+        </button>
+        <div
+          class="flex bg-white/80 dark:bg-slate-800/80 rounded-full p-1 shadow border border-white/60 dark:border-slate-700 text-sm">
+          <button id="unitC"
+            class="px-3 py-1 rounded-full bg-sky-500 text-white font-semibold text-xs">°C</button>
+          <button id="unitF"
+            class="px-3 py-1 rounded-full text-slate-600 dark:text-slate-300 text-xs">°F</button>
+        </div>
+        <button id="refreshBtn"
+          class="flex items-center gap-2 px-4 py-2 rounded-full bg-sky-500 hover:bg-sky-600 text-white text-sm shadow">
+          <span id="refreshSpinner" class="spinner hidden"></span>
+          <span>Refresh</span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <main class="max-w-6xl mx-auto px-4 py-6 space-y-6">
+
+    <section
+      class="backdrop-blur-xl bg-white/70 dark:bg-slate-900/70 rounded-3xl shadow-lg px-6 py-5 border border-white/40 dark:border-slate-800">
+      <div class="flex gap-3 items-center">
+        <div class="relative flex-1">
+          <input id="searchInput"
+            class="w-full px-5 py-3 rounded-full bg-white/90 dark:bg-slate-800 border border-white/70 dark:border-slate-700 shadow-sm text-sm focus:outline-none focus:ring-2 focus:ring-sky-400"
+            placeholder="Cari kota (contoh: Jakarta, Tokyo)..." />
+          <div id="suggestions"
+            class="hidden absolute left-0 right-0 mt-2 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-lg max-h-56 overflow-y-auto text-sm z-20">
+          </div>
+        </div>
+        <button id="searchBtn"
+          class="px-6 py-3 rounded-full bg-sky-500 hover:bg-sky-600 text-white text-sm font-semibold shadow">
+          Cari
+        </button>
+      </div>
+      <p id="statusText" class="text-xs mt-3"></p>
+    </section>
+
+    <div class="grid md:grid-cols-[minmax(0,2fr)_minmax(0,1fr)] gap-6">
+      <section id="currentWeather"
+        class="backdrop-blur-xl bg-sky-50/90 dark:bg-slate-900/80 rounded-3xl shadow-lg px-6 py-5 border border-white/50 dark:border-slate-800 min-h-[220px]">
+        <p class="text-sm opacity-60">Mengambil data cuaca...</p>
+      </section>
+
+      <div class="space-y-4">
+        <section
+          class="backdrop-blur-xl bg-white/70 dark:bg-slate-900/70 rounded-3xl shadow-lg px-6 py-5 border border-white/50 dark:border-slate-800">
+          <h2 class="font-semibold text-sm mb-1">Kota Favorit</h2>
+          <p class="text-xs text-slate-500 dark:text-slate-400 mb-3">
+            Klik nama kota di bawah untuk melihat cuaca.
+          </p>
+          <div id="favList" class="flex flex-wrap gap-2 text-xs"></div>
+        </section>
+        <section
+          class="backdrop-blur-xl bg-white/70 dark:bg-slate-900/70 rounded-3xl shadow-lg px-6 py-5 border border-white/50 dark:border-slate-800">
+          <h2 class="font-semibold text-sm mb-3">Status Sistem</h2>
+
+          <div class="space-y-1 text-xs mb-3">
+            <p class="flex items-center gap-2">
+              <span id="dotOnline" class="status-dot bg-emerald-400"></span>
+              <span id="statusOnlineText">Online (API OK)</span>
+            </p>
+            <p class="flex items-center gap-2">
+              <span class="status-dot bg-sky-400"></span>
+              <span>Auto Update: On (5 menit)</span>
+            </p>
+          </div>
+
+          <p class="text-[11px] font-semibold mb-1">Log Aktivitas</p>
+          <div
+            class="rounded-2xl bg-white/90 dark:bg-slate-900/80 border border-slate-200/70 dark:border-slate-700/60 max-h-40 overflow-y-auto text-[11px] leading-relaxed px-3 py-2"
+            id="logList">
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <section
+      class="backdrop-blur-xl bg-white/75 dark:bg-slate-900/75 rounded-3xl shadow-lg px-6 py-5 border border-white/50 dark:border-slate-800">
+      <h2 class="font-bold mb-4 text-sm">Prakiraan 5 Hari</h2>
+      <div id="forecastGrid" class="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-5 gap-4 text-sm"></div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
