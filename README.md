@@ -57,7 +57,7 @@ Project ini menggunakan **OpenWeather API** (Current Weather & 5-Day Forecast).
 
 | 🌞 **Day Mode** | 🌚 **Night Mode** |
 |-----------------|-------------------|
-| ![Day Mode]<img width="1917" height="1030" alt="1" src="https://github.com/user-attachments/assets/2337a9b0-0654-432d-8d15-6b1db142c4c9"/>| ![Night Mode](assets/screenshots/night-mode.png) |
+|<img width="1917" height="1030" alt="1" src="https://github.com/user-attachments/assets/1a3dae1d-6b91-4e77-9f8b-fe2610101754" /> | <img width="1917" height="1029" alt="2" src="https://github.com/user-attachments/assets/24f61317-53a1-49d6-a376-9a9a55f75c3f" /> |
 
 ---
 
