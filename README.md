@@ -37,17 +37,6 @@ Project ini dibuat untuk memenuhi **Tugas Akhir Modul 6.4** dengan ketentuan seb
 
 ---
 
-## 🧰 Tech Stack
-| Teknologi | Deskripsi |
-|-----------|-----------|
-| **HTML, CSS, JavaScript** | UI & Frontend logic |
-| **OpenWeather API** | Sumber data cuaca |
-| **Fetch API (Async/Await)** | Pengambilan data dari API |
-| **LocalStorage** | Menyimpan kota favorit |
-| **Responsive Layout** | Mendukung tampilan mobile & desktop |
-
----
-
 ## 🌐 API yang Digunakan
 Project ini menggunakan **OpenWeather API** (Current Weather & 5-Day Forecast).
 
@@ -62,6 +51,7 @@ Project ini menggunakan **OpenWeather API** (Current Weather & 5-Day Forecast).
 ---
 
 🔍 **Search + Auto-Complete + Favorite Cities + System Log**
+
 <img width="1916" height="964" alt="3" src="https://github.com/user-attachments/assets/3bfb16f2-ae2f-48ae-a5f8-60a15b101779" />
 
 ---
@@ -76,4 +66,14 @@ Project ini menggunakan **OpenWeather API** (Current Weather & 5-Day Forecast).
 
 ---
 
+## 🧰 Tech Stack
+| Teknologi | Deskripsi |
+|-----------|-----------|
+| **HTML, CSS, JavaScript** | UI & Frontend logic |
+| **OpenWeather API** | Sumber data cuaca |
+| **Fetch API (Async/Await)** | Pengambilan data dari API |
+| **LocalStorage** | Menyimpan kota favorit |
+| **Responsive Layout** | Mendukung tampilan mobile & desktop |
+
+---
 _Tri Septiani (2315061036)_
