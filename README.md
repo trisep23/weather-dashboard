@@ -49,11 +49,15 @@ Project ini dibuat untuk memenuhi **Tugas Akhir Modul 6.4** dengan ketentuan seb
 ---
 
 ## 🌐 API yang Digunakan
-Project ini menggunakan **OpenWeather API** (Current Weather & 5-Day Forecast).## 📸 Preview UI
+Project ini menggunakan **OpenWeather API** (Current Weather & 5-Day Forecast).
+
+---
+
+## 📸 Preview UI
 
 | 🌞 **Day Mode** | 🌚 **Night Mode** |
 |-----------------|-------------------|
-| ![Day Mode](assets/screenshots/day-mode.png) | ![Night Mode](assets/screenshots/night-mode.png) |
+| ![Day Mode]<img width="1917" height="1030" alt="1" src="https://github.com/user-attachments/assets/2337a9b0-0654-432d-8d15-6b1db142c4c9"/>| ![Night Mode](assets/screenshots/night-mode.png) |
 
 ---
 
