@@ -1,4 +1,4 @@
-# 🌤️ Weather Dashboard — Final Project
+# 🌤️ Weather Dashboard — Project TA 6
 
 Aplikasi **Weather Dashboard** untuk menampilkan informasi cuaca **real-time** serta **prakiraan 5 hari**.  
 Memiliki fitur **pencarian kota, auto-complete, favorit kota, toggle suhu, refresh data, auto update, log aktivitas**, dan **tema siang/malam**.  
@@ -49,4 +49,31 @@ Project ini dibuat untuk memenuhi **Tugas Akhir Modul 6.4** dengan ketentuan seb
 ---
 
 ## 🌐 API yang Digunakan
-Project ini menggunakan **OpenWeather API** (Current Weather & 5-Day Forecast).
+Project ini menggunakan **OpenWeather API** (Current Weather & 5-Day Forecast).## 📸 Preview UI
+
+| 🌞 **Day Mode** | 🌚 **Night Mode** |
+|-----------------|-------------------|
+| ![Day Mode](assets/screenshots/day-mode.png) | ![Night Mode](assets/screenshots/night-mode.png) |
+
+---
+
+| 🔍 **Search + Auto-Complete** | ⭐ **Favorite Cities + System Log** |
+|-------------------------------|-------------------------------------|
+| ![Search Feature](assets/screenshots/search-autocomplete.png) | ![Favorites + Log](assets/screenshots/favorite-systemlog.png) |
+
+---
+
+| 🧮 **Toggle Celsius / Fahrenheit** | 🗓️ **5-Day Forecast** |
+|-------------------------------------|-------------------------|
+| ![Toggle](assets/screenshots/toggle-cf.png) | ![Forecast](assets/screenshots/forecast.png) |
+
+---
+
+| 🔄 **Refresh Button + Auto Update** | 📍 **Example City: Bandung** |
+|-------------------------------------|------------------------------|
+| ![Refresh](assets/screenshots/refresh.png) | ![Bandung](assets/screenshots/bandung.png) |
+
+
+---
+
+
