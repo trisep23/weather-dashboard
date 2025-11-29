@@ -56,7 +56,8 @@ Project ini menggunakan **OpenWeather API** (Current Weather & 5-Day Forecast).
 
 ---
 
-🧮 **Toggle Celsius / Fahrenheit + Refresh Button + Auto Update **
+🧮 **Toggle Celsius / Fahrenheit + Refresh Button + Auto Update**
+
 <img width="345" height="126" alt="image" src="https://github.com/user-attachments/assets/6d283af2-9b79-4d41-826d-a9edc4f84879" />
 
 ---
